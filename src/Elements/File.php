@@ -8,6 +8,23 @@ use Spatie\Html\Elements\Attributes\Disabled;
 use Spatie\Html\Elements\Attributes\Name;
 use Spatie\Html\Elements\Attributes\Required;
 
+/**
+ * @method static acceptIf(bool $condition, string|null $name)
+ * @method static acceptIfNotNull(bool $condition, string|null $name)
+ * @method static acceptUnless(bool $condition, string|null $name)
+ * @method static acceptAudioIf(bool $condition)
+ * @method static acceptAudioIfNotNull(bool $condition)
+ * @method static acceptAudioUnless(bool $condition)
+ * @method static acceptVideoIf(bool $condition)
+ * @method static acceptVideoIfNotNull(bool $condition)
+ * @method static acceptVideoUnless(bool $condition)
+ * @method static acceptImageIf(bool $condition)
+ * @method static acceptImageIfNotNull(bool $condition)
+ * @method static acceptImageUnless(bool $condition)
+ * @method static multipleIf(bool $condition)
+ * @method static multipleIfNotNull(bool $condition)
+ * @method static multipleUnless(bool $condition)
+ */
 class File extends BaseElement
 {
     use Autofocus;

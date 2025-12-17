@@ -5,6 +5,11 @@ namespace Spatie\Html\Elements;
 use Spatie\Html\BaseElement;
 use Spatie\Html\Elements\Attributes\Disabled;
 
+/**
+ * @method static legendIf(bool $condition, \Spatie\Html\HtmlElement|string $text)
+ * @method static legendIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string $text)
+ * @method static legendUnless(bool $condition, \Spatie\Html\HtmlElement|string $text)
+ */
 class Fieldset extends BaseElement
 {
     use Disabled;
