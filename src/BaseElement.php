@@ -44,12 +44,12 @@ use Spatie\Html\Exceptions\MissingTag;
  * @method static addChildrenIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
  * @method static addChildrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
  * @method static addChildrenUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static addChildIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static addChildIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static addChildUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static childIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static childIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
- * @method static childUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static addChildIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static addChildIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static addChildUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
  * @method static childrenIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
  * @method static childrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
  * @method static childrenUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
@@ -263,7 +263,7 @@ abstract class BaseElement implements Htmlable, HtmlElement
     /**
      * Alias for `addChildren`.
      *
-     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $children
+     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $child
      * @param callable|null $mapper
      *
      * @return static
@@ -276,7 +276,7 @@ abstract class BaseElement implements Htmlable, HtmlElement
     /**
      * Alias for `addChildren`.
      *
-     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $children
+     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $child
      * @param callable|null $mapper
      *
      * @return static
