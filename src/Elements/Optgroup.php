@@ -17,7 +17,7 @@ class Optgroup extends BaseElement
     protected $tag = 'optgroup';
 
     /**
-     * @param string|null $href
+     * @param string|null $label
      *
      * @return static
      */

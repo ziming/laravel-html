@@ -6,9 +6,9 @@ use Spatie\Html\BaseElement;
 use Spatie\Html\Elements\Attributes\Disabled;
 
 /**
- * @method static legendIf(bool $condition, \Spatie\Html\HtmlElement|string $text)
- * @method static legendIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string $text)
- * @method static legendUnless(bool $condition, \Spatie\Html\HtmlElement|string $text)
+ * @method static legendIf(bool $condition, \Spatie\Html\HtmlElement|string $contents)
+ * @method static legendIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string $contents)
+ * @method static legendUnless(bool $condition, \Spatie\Html\HtmlElement|string $contents)
  */
 class Fieldset extends BaseElement
 {
@@ -17,7 +17,7 @@ class Fieldset extends BaseElement
     protected $tag = 'fieldset';
 
     /**
-     * @param \Spatie\Html\HtmlElement|string $text
+     * @param \Spatie\Html\HtmlElement|string $contents
      *
      * @return static
      */

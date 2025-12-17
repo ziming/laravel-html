@@ -9,9 +9,9 @@ use Spatie\Html\Elements\Attributes\Name;
 use Spatie\Html\Elements\Attributes\Required;
 
 /**
- * @method static acceptIf(bool $condition, string|null $name)
- * @method static acceptIfNotNull(bool $condition, string|null $name)
- * @method static acceptUnless(bool $condition, string|null $name)
+ * @method static acceptIf(bool $condition, string|null $type)
+ * @method static acceptIfNotNull(bool $condition, string|null $type)
+ * @method static acceptUnless(bool $condition, string|null $type)
  * @method static acceptAudioIf(bool $condition)
  * @method static acceptAudioIfNotNull(bool $condition)
  * @method static acceptAudioUnless(bool $condition)
@@ -46,7 +46,7 @@ class File extends BaseElement
     }
 
     /**
-     * @param string|null $name
+     * @param string|null $type
      *
      * @return static
      */
