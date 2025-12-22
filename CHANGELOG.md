@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-html` will be documented in this file.
 
+## 3.12.2 - 2025-12-22
+
+### What's Changed
+
+* Document conditional methods by @miken32 in https://github.com/spatie/laravel-html/pull/261
+
+**Full Changelog**: https://github.com/spatie/laravel-html/compare/3.12.1...3.12.2
+
 ## 3.12.1 - 2025-10-02
 
 ### What's Changed
