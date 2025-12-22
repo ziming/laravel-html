@@ -71,7 +71,9 @@ use Spatie\Html\Exceptions\MissingTag;
  */
 abstract class BaseElement implements Htmlable, HtmlElement
 {
-    use Conditionable;
+    use Conditionable {
+        unless as trait_unless;
+    }
 
     use Macroable {
         __call as __macro_call;
@@ -388,13 +390,18 @@ abstract class BaseElement implements Htmlable, HtmlElement
      * Conditionally transform the element. Note that since elements are
      * immutable, you'll need to return a new instance from the callback.
      *
-     * @param bool $condition
-     * @param \Closure $callback
+     * @param mixed $condition
+     * @param callable $callback
+     * @param callable|null $default
      *
      * @return mixed
      */
-    public function unless(bool $condition, \Closure $callback)
+    public function unless($condition, callable $callback, callable|null $default = null)
     {
+        if (! is_bool($condition) || ! $callback instanceof \Closure || ! is_null($default)) {
+            return $this->trait_unless($condition, $callback, $default);
+        }
+
         return $this->if(! $condition, $callback);
     }
 
