@@ -13,6 +13,62 @@ use Spatie\Html\Exceptions\InvalidChild;
 use Spatie\Html\Exceptions\InvalidHtml;
 use Spatie\Html\Exceptions\MissingTag;
 
+/**
+ * @method static attributeIf(bool $condition, string $attribute, string|null $value)
+ * @method static attributeIfNotNull(bool $condition, string $attribute, string|null $value)
+ * @method static attributeUnless(bool $condition, string $attribute, string|null $value)
+ * @method static attributesIf(bool $condition, iterable<string> $attributes)
+ * @method static attributesIfNotNull(bool $condition, iterable<string> $attributes)
+ * @method static attributesUnless(bool $condition, iterable<string> $attributes)
+ * @method static forgetAttributeIf(bool $condition, string $attribute)
+ * @method static forgetAttributeIfNotNull(bool $condition, string $attribute)
+ * @method static forgetAttributeUnless(bool $condition, string $attribute)
+ * @method static classIf(bool $condition, string|iterable<string> $class)
+ * @method static classIfNotNull(bool $condition, string|iterable<string> $class)
+ * @method static classUnless(bool $condition, string|iterable<string> $class)
+ * @method static addClassIf(bool $condition, string|iterable<string> $class)
+ * @method static addClassIfNotNull(bool $condition, string|iterable<string> $class)
+ * @method static addClassUnless(bool $condition, string|iterable<string> $class)
+ * @method static idIf(bool $condition, string $id)
+ * @method static idIfNotNull(bool $condition, string $id)
+ * @method static idUnless(bool $condition, string $id)
+ * @method static styleIf(bool $condition, array<string,mixed>|string|null $style)
+ * @method static styleIfNotNull(bool $condition, array<string,mixed>|string|null $style)
+ * @method static styleUnless(bool $condition, array<string,mixed>|string|null $style)
+ * @method static dataIf(bool $condition, string $name, string|null $value)
+ * @method static dataIfNotNull(bool $condition, string $name, string|null $value)
+ * @method static dataUnless(bool $condition, string $name, string|null $value)
+ * @method static ariaIf(bool $condition, string $name, string|null $value)
+ * @method static ariaIfNotNull(bool $condition, string $name, string|null $value)
+ * @method static ariaUnless(bool $condition, string $name, string|null $value)
+ * @method static addChildrenIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static addChildrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static addChildrenUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static addChildIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static addChildIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static addChildUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $child, callable|null $mapper)
+ * @method static childrenIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static childrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static childrenUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static setChildrenIf(bool $condition, \Spatie\Html\HtmlElement[] $children, callable|null $mapper)
+ * @method static setChildrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement[] $children, callable|null $mapper)
+ * @method static setChildrenUnless(bool $condition, \Spatie\Html\HtmlElement[] $children, callable|null $mapper)
+ * @method static prependChildrenIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static prependChildrenIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static prependChildrenUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static prependChildIf(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static prependChildIfNotNull(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static prependChildUnless(bool $condition, \Spatie\Html\HtmlElement|string|iterable|int|float|null $children, callable|null $mapper)
+ * @method static textIf(bool $condition, string|null $text)
+ * @method static textIfNotNull(bool $condition, string|null $text)
+ * @method static textUnless(bool $condition, string|null $text)
+ * @method static htmlIf(bool $condition, string|null $html)
+ * @method static htmlIfNotNull(bool $condition, string|null $html)
+ * @method static htmlUnless(bool $condition, string|null $html)
+ */
 abstract class BaseElement implements Htmlable, HtmlElement
 {
     use Conditionable;
@@ -207,7 +263,7 @@ abstract class BaseElement implements Htmlable, HtmlElement
     /**
      * Alias for `addChildren`.
      *
-     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $children
+     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $child
      * @param callable|null $mapper
      *
      * @return static
@@ -220,7 +276,7 @@ abstract class BaseElement implements Htmlable, HtmlElement
     /**
      * Alias for `addChildren`.
      *
-     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $children
+     * @param \Spatie\Html\HtmlElement|string|iterable|int|float|null $child
      * @param callable|null $mapper
      *
      * @return static
