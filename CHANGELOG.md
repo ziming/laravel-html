@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-html` will be documented in this file.
 
+## 3.13.0 - 2026-02-22
+
+### What's Changed
+
+- Add Laravel 13 support
+- Add PHP 8.5 to test matrix
+- Update test dependencies (Pest 4, PHPUnit 12, Testbench 11)
+- Fix tests by restoring optional Request injection in Html class
+- Remove deprecated PHPUnit 9 attributes from phpunit.xml.dist
+
 ## 3.12.3 - 2025-12-22
 
 ### What's Changed
